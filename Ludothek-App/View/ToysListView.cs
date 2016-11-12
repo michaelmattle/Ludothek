@@ -52,7 +52,7 @@ namespace Ludothek.Application.View
 
         public void UpdateView()
         {
-            controller.update();
+            controller.Update();
         }
         #endregion
     }

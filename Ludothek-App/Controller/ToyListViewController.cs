@@ -17,7 +17,7 @@ namespace Ludothek.Application.Controller
             this.listView = listView;
         }
 
-        public void update()
+        public void Update()
         {
             listView.Items.Clear();
             foreach ( Toy toy in model )
@@ -28,11 +28,6 @@ namespace Ludothek.Application.Controller
                 item.SubItems.Add(toy.PricePerWeek.ToString());
                 listView.Items.Add(item);
             }
-        }
-
-        public void Update()
-        {
-            throw new NotImplementedException();
         }
     }
 }
