@@ -62,7 +62,7 @@ namespace Ludothek.Application.Model
         }
 
         #region Implement Interface IEnumerator<Person>
-        //damit direkt über PersonenModel iteriert werden kann
+        //damit direkt über ToyModel iteriert werden kann
         //z.B. mit foreach()
         public IEnumerator<Toy> GetEnumerator()
         {

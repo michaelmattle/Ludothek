@@ -4,13 +4,13 @@ using System;
 
 namespace Ludothek.Application.Controller
 {
-    class ToyController : BaseController
+    class ToyListViewController : BaseController
     {
         Model.ToyModel model;
         View.ToysListView view;
         ListView listView;
 
-        public ToyController(Model.ToyModel model, View.ToysListView view, ListView listView) : base()
+        public ToyListViewController(Model.ToyModel model, View.ToysListView view, ListView listView) : base()
         {
             this.model = model;
             this.view = view;

@@ -68,7 +68,6 @@
     <Compile Include="View\CustomersView.Designer.cs">
       <DependentUpon>CustomersView.cs</DependentUpon>
     </Compile>
-    <Compile Include="_Example\IPersonenView.cs" />
     <Compile Include="View\IView.cs" />
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
@@ -88,23 +87,6 @@
     <Compile Include="View\NewToyView.Designer.cs">
       <DependentUpon>NewToyView.cs</DependentUpon>
     </Compile>
-    <Compile Include="_Example\PersonenListView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="_Example\PersonenListView.Designer.cs">
-      <DependentUpon>PersonenListView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="_Example\PersonenListViewController.cs" />
-    <Compile Include="_Example\PersonenView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="_Example\PersonenView.Designer.cs">
-      <DependentUpon>PersonenView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="_Example\PersonenViewController.cs" />
-    <Compile Include="_Example\Person.cs" />
-    <Compile Include="_Example\PersonenModel.cs" />
-    <None Include="_Example\Program.cs.old" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\RentToyView.cs">
       <SubType>Form</SubType>
@@ -130,6 +112,19 @@
     <Compile Include="View\ToysView.Designer.cs">
       <DependentUpon>ToysView.cs</DependentUpon>
     </Compile>
+    <Compile Include="_Example\IPersonenView.cs" />
+    <Compile Include="_Example\Person.cs" />
+    <Compile Include="_Example\PersonenListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Example\PersonenListView.Designer.cs" />
+    <Compile Include="_Example\PersonenListViewController.cs" />
+    <Compile Include="_Example\PersonenModel.cs" />
+    <Compile Include="_Example\PersonenView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Example\PersonenView.Designer.cs" />
+    <Compile Include="_Example\PersonenViewController.cs" />
     <EmbeddedResource Include="View\CustomerListView.resx">
       <DependentUpon>CustomerListView.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,12 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\NewToyView.resx">
       <DependentUpon>NewToyView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="_Example\PersonenListView.resx">
-      <DependentUpon>PersonenListView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="_Example\PersonenView.resx">
-      <DependentUpon>PersonenView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -173,6 +162,8 @@
     <EmbeddedResource Include="View\ToysView.resx">
       <DependentUpon>ToysView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="_Example\PersonenListView.resx" />
+    <EmbeddedResource Include="_Example\PersonenView.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

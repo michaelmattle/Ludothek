@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace Ludothek.Application.View
 {
-    public partial class ToysListView : Form
+    public partial class ToysListView : Form, IView
     {
         Model.ToyModel model;
-        Controller.ToyController controller;
+        Controller.ToyListViewController controller;
 
         public ToysListView(Model.ToyModel toymodel)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
             model = toymodel;
-            controller = new Controller.ToyController(model, this, listAllToys);
+            controller = new Controller.ToyListViewController(model, this, listAllToys);
         }
 
         public ToysListView()
@@ -36,5 +36,24 @@ namespace Ludothek.Application.View
         {
 
         }
+
+        #region Observer
+        private void ToyListView_Load(object sender, EventArgs e)
+        {
+            //register observer
+            model.AddView(this);
+        }
+
+        private void PersonenListView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //deregister observer
+            model.RemoveView(this);
+        }
+
+        public void UpdateView()
+        {
+            controller.update();
+        }
+        #endregion
     }
 }

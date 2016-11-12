@@ -14,8 +14,7 @@ namespace PersonenverwaltungMVC_2
             personenModel = model;
             personelListViewController = new PersonenListViewController(personenModel, this, listAllCustomers);
         }
-
-
+        
         #region Observer
         private void PersonenListView_Load(object sender, EventArgs e)
         {
