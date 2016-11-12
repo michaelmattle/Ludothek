@@ -25,6 +25,7 @@ namespace Ludothek.Application.View
                     //values preserved after close
                     selectedToy = view.SelectedToy;
                     selectedToy.Available = true;
+                    selectedToy.CustomerNumber = 0;
                     txtToyNo.Text = selectedToy.ToyNo + "";
                 }
             }
