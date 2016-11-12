@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace Ludothek.Application
 {
-    class Rental
+    public class Rental
     { 
         public Toy Toy { get; set; }
         public Customer Customer { get; set; }
-
         public Rental(Toy toy, Customer customer)
         {
             Customer = customer;

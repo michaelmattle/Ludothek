@@ -21,9 +21,7 @@ namespace Ludothek.Application.View
             _model = new MainModel();
             _controller = new MainController(_model, this, listDueReturns);
         }
-
-
-
+        
         private void btnRentToy_Click(object sender, EventArgs e)
         {
             RentToyView rentToyView = new RentToyView();
@@ -55,7 +53,7 @@ namespace Ludothek.Application.View
         {
 
         }
-
+        
         private void ausleihenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RentToyView rtv = new RentToyView();
