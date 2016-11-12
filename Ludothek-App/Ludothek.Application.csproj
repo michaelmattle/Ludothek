@@ -46,10 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customer.cs" />
+    <Compile Include="Controller\BaseController.cs" />
+    <Compile Include="Controller\CustomerController.cs" />
+    <Compile Include="Model\Customer.cs" />
     <Compile Include="Globals.cs" />
+    <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\Repository.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Toy.cs" />
+    <Compile Include="Model\Toy.cs" />
     <Compile Include="View\CustomerListView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,10 +183,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ludothek.Application
+namespace Ludothek.Application.Model
 {
-    class Customer
+    public class Customer : BaseModel
     {
         public int CustomerNo;
         public string Name { get; set; }
