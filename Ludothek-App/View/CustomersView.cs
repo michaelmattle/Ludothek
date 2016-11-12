@@ -29,15 +29,11 @@ namespace Ludothek.Application.View
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            Close();
-=======
             if(this.SelectedCustomer != null)
             {
                 this.DialogResult = DialogResult.OK;
                 Close();
             }
->>>>>>> origin/master
         }
         
         #region Observer
