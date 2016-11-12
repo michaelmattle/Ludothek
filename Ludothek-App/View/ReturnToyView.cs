@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Ludothek.Application.Model;
 
 namespace Ludothek.Application.View
 {
@@ -15,11 +16,16 @@ namespace Ludothek.Application.View
 
         private void btnToys_Click(object sender, EventArgs e)
         {
-            ToysView tv = new ToysView(_model);
-            var result = tv.ShowDialog();
-            if (result == DialogResult.OK)
+            using (ToysView view = new ToysView(_model))
             {
-
+                ToysView tv = new ToysView(_model);
+                var result = tv.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    //values preserved after close
+                    Toy selectedToy = view.SelectedToy;
+                    txtToyNo.Text = selectedToy.ToyNo + "";
+                }
             }
         }
 

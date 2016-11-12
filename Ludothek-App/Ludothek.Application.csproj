@@ -60,7 +60,7 @@
     <Compile Include="Model\ToyModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Rental.cs" />
-    <Compile Include="Toy.cs" />
+    <Compile Include="Model\Toy.cs" />
     <Compile Include="View\CustomerListView.cs">
       <SubType>Form</SubType>
     </Compile>
