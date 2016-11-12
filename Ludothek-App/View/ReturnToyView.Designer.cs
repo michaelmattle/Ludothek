@@ -37,9 +37,10 @@
             // 
             // btnToys
             // 
-            this.btnToys.Location = new System.Drawing.Point(492, 23);
+            this.btnToys.Location = new System.Drawing.Point(328, 15);
+            this.btnToys.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnToys.Name = "btnToys";
-            this.btnToys.Size = new System.Drawing.Size(134, 30);
+            this.btnToys.Size = new System.Drawing.Size(89, 19);
             this.btnToys.TabIndex = 5;
             this.btnToys.Text = "Spielzeuge...";
             this.btnToys.UseVisualStyleBackColor = true;
@@ -47,25 +48,28 @@
             // 
             // txtToyNo
             // 
-            this.txtToyNo.Location = new System.Drawing.Point(179, 25);
+            this.txtToyNo.Location = new System.Drawing.Point(119, 16);
+            this.txtToyNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtToyNo.Name = "txtToyNo";
-            this.txtToyNo.Size = new System.Drawing.Size(307, 26);
+            this.txtToyNo.Size = new System.Drawing.Size(206, 20);
             this.txtToyNo.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Location = new System.Drawing.Point(8, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 20);
+            this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Spielzeugnummer:";
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(492, 113);
+            this.btnReturn.Location = new System.Drawing.Point(328, 73);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(134, 30);
+            this.btnReturn.Size = new System.Drawing.Size(89, 19);
             this.btnReturn.TabIndex = 10;
             this.btnReturn.Text = "Zurückgeben";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -73,9 +77,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(352, 113);
+            this.btnCancel.Location = new System.Drawing.Point(235, 73);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 30);
+            this.btnCancel.Size = new System.Drawing.Size(89, 19);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Abbrechen";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -83,16 +88,17 @@
             // 
             // ReturnToyView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 163);
+            this.ClientSize = new System.Drawing.Size(428, 106);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnToys);
             this.Controls.Add(this.txtToyNo);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ReturnToyView";
-            this.Text = "ReturnToyView";
+            this.Text = "Spielzeug zurückgeben";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,20 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ludothek.Application.View
 {
-    public partial class ToysView : Form
+    public partial class ToysView : Form, IView
     {
-        public ToysView()
+        Model.ToyModel _model;
+        Controller.ToyController _controller;
+
+        public ToysView(Model.ToyModel toymodel)
         {
             InitializeComponent();
+            _model = toymodel;
+            _controller = new Controller.ToyController(_model, this );
+            _model.AddView(this);
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
@@ -24,7 +23,12 @@ namespace Ludothek.Application.View
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            Close();
+        }
 
+        public void UpdateView()
+        {
+            _controller.Update();
         }
     }
 }

@@ -1,31 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Ludothek.Application.View
 {
     public partial class ReturnToyView : Form
     {
-        public ReturnToyView()
+        Model.ToyModel _model;
+        public ReturnToyView(Model.ToyModel toymodel)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            _model = toymodel;
         }
 
         private void btnToys_Click(object sender, EventArgs e)
         {
-
+            ToysView tv = new ToysView(_model);
+            tv.ShowDialog();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
