@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Ludothek.Application.Controller
 {
-    public abstract class BaseController
+    public interface BaseController
     {
-        protected Repository Repository;
-        public BaseModel Model;
+        void Update();
     }
 }

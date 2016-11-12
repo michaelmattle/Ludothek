@@ -51,6 +51,7 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\Repository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Model\Toy.cs" />
@@ -66,7 +67,8 @@
     <Compile Include="View\CustomersView.Designer.cs">
       <DependentUpon>CustomersView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Old\IPersonenView.cs" />
+    <Compile Include="_Example\IPersonenView.cs" />
+    <Compile Include="View\IView.cs" />
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,23 +87,23 @@
     <Compile Include="View\NewToyView.Designer.cs">
       <DependentUpon>NewToyView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Old\PersonenListView.cs">
+    <Compile Include="_Example\PersonenListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Old\PersonenListView.Designer.cs">
+    <Compile Include="_Example\PersonenListView.Designer.cs">
       <DependentUpon>PersonenListView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Old\PersonenListViewController.cs" />
-    <Compile Include="Old\PersonenView.cs">
+    <Compile Include="_Example\PersonenListViewController.cs" />
+    <Compile Include="_Example\PersonenView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Old\PersonenView.Designer.cs">
+    <Compile Include="_Example\PersonenView.Designer.cs">
       <DependentUpon>PersonenView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Old\PersonenViewController.cs" />
-    <Compile Include="Old\Person.cs" />
-    <Compile Include="Old\PersonenModel.cs" />
-    <None Include="Old\Program.cs.old" />
+    <Compile Include="_Example\PersonenViewController.cs" />
+    <Compile Include="_Example\Person.cs" />
+    <Compile Include="_Example\PersonenModel.cs" />
+    <None Include="_Example\Program.cs.old" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\RentToyView.cs">
       <SubType>Form</SubType>
@@ -142,10 +144,10 @@
     <EmbeddedResource Include="View\NewToyView.resx">
       <DependentUpon>NewToyView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Old\PersonenListView.resx">
+    <EmbeddedResource Include="_Example\PersonenListView.resx">
       <DependentUpon>PersonenListView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Old\PersonenView.resx">
+    <EmbeddedResource Include="_Example\PersonenView.resx">
       <DependentUpon>PersonenView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

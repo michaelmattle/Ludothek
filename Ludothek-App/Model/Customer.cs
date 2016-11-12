@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ludothek.Application.Model
 {
-    public class Customer : BaseModel
+    public class Customer
     {
         public int CustomerNo;
         public string Name { get; set; }
@@ -33,6 +34,20 @@ namespace Ludothek.Application.Model
             EMail = email;
             ClubMember = clubmember;
             CustomerNo = customerno;
+        }
+
+        public Customer()
+        {
+        }
+
+        public IEnumerator<Customer> GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
         }
     }
 }

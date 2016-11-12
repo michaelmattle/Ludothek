@@ -1,17 +1,22 @@
-﻿using Ludothek.Application.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using Ludothek.Application.Model;
+using Ludothek.Application.View;
 
 namespace Ludothek.Application.Controller
 {
     class CustomerController : BaseController
     {
+        CustomerModel model;
+        CustomerListView view;
+
+
         public CustomerController(Repository repo) : base()
         {
-            Model = new Customer();
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
         }
     }
 }
