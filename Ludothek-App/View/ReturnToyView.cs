@@ -16,7 +16,11 @@ namespace Ludothek.Application.View
         private void btnToys_Click(object sender, EventArgs e)
         {
             ToysView tv = new ToysView(_model);
-            tv.ShowDialog();
+            var result = tv.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
