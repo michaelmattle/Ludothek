@@ -76,7 +76,7 @@ namespace Ludothek.Application.View
 
         private void MainView_Load(object sender, EventArgs e)
         {
-            _
+            _controller.Update();
         }
     }
 }
