@@ -27,6 +27,7 @@ namespace Ludothek.Application.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            // validate and create new customer
             if (txtName.Text != "" && txtSurename.Text != "" && txtCountry.Text != "" && txtPlace.Text != "" && 
                 txtStreet.Text != "" && txtZIP.Text != "" && txtPhoneNo.Text != "" && txtMail.Text != "")
             {

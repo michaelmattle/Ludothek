@@ -64,6 +64,12 @@ namespace Ludothek.Application.Model
             UpdateAllViews();
         }
 
+        public Customer GetCustomerById(int id)
+        {
+            return customers.FirstOrDefault(c => c.CustomerNo == id);
+        }
+        
+
         #region Implement Interface IEnumerator<Person>
         //damit direkt über PersonenModel iteriert werden kann
         //z.B. mit foreach()

@@ -17,11 +17,13 @@ namespace Ludothek.Application.View
             _model = model;
             _controller = new CustomerController(_model, this, listAllCustomers);
             _model.AddView(this);
+
         }
 
+        // update selected customer data
         private void btnAccept_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnNewCustomer_Click(object sender, EventArgs e)
@@ -48,5 +50,36 @@ namespace Ludothek.Application.View
             _controller.Update();
         }
         #endregion
+
+        private void listAllCustomers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedIndex = listAllCustomers.SelectedIndices[0];
+                
+                Customer selectedCustomer = _model.GetCustomerById(selectedIndex + 1);
+
+                // fill form fields
+                txtCustomerNo.Text = selectedCustomer.CustomerNo  + "";
+                txtName.Text = selectedCustomer.Name;
+                txtSurename.Text = selectedCustomer.Surename;
+                txtMail.Text = selectedCustomer.EMail;
+                dateBirthday.SetDate(Convert.ToDateTime(selectedCustomer.Birthday));
+                txtStreet.Text = selectedCustomer.Street;
+                txtZIP.Text = selectedCustomer.ZIP;
+                txtPlace.Text = selectedCustomer.Place;
+                txtCountry.Text = selectedCustomer.Country;
+                txtCountry.Text = selectedCustomer.Country;
+                txtPhoneNo.Text = selectedCustomer.Phone;
+                cbClubMember.Checked = selectedCustomer.ClubMember;
+                
+            }
+            catch (Exception ex)
+            {
+                // do stuff with exception
+            }
+
+
+        }
     }
 }

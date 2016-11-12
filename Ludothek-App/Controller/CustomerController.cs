@@ -28,7 +28,14 @@ namespace Ludothek.Application.Controller
         {
             model.AddCustomer(customer);
         }
-        
+
+        public void ChangeSelectedCustomer(Customer newCustomer)
+        {/*
+            Customer current = listView.SelectedItems[0] as Customer;
+            if (toy != null)
+                model.ChangeCustomer(customer, newCustomer);*/
+        }
+
 
         public void Update()
         {
