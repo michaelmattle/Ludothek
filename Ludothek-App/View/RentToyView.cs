@@ -20,7 +20,17 @@ namespace Ludothek.Application.View
 
         private void btnToys_Click(object sender, EventArgs e)
         {
+            using (ToysView view = new ToysView(toyModel))
+            {
+                var result = view.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    //values preserved after close
+                    Toy selectedToy = view.SelectedToy;
 
+                    txtToyNo.Text = selectedToy.ToyNo + "";
+                }
+            }
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
