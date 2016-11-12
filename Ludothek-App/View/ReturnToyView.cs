@@ -18,8 +18,7 @@ namespace Ludothek.Application.View
         {
             using (ToysView view = new ToysView(_model))
             {
-                ToysView tv = new ToysView(_model);
-                var result = tv.ShowDialog();
+                var result = view.ShowDialog();
                 if (result == DialogResult.OK)
                 {
                     //values preserved after close

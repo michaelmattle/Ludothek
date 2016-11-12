@@ -26,7 +26,7 @@ namespace Ludothek.Application.View
                 if (result == DialogResult.OK)
                 {
                     //values preserved after close
-                    Toy selectedToy = toyModel.GetToyById(view.selectedToyID);
+                    Toy selectedToy = view.SelectedToy;
 
                     txtToyNo.Text = selectedToy.ToyNo + "";
 

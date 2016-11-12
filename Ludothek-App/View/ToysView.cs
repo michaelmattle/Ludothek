@@ -61,6 +61,7 @@ namespace Ludothek.Application.View
                 int selectedIndex = listAllToys.SelectedIndices[0];
                 Toy selectedToy = _model.GetToyById(selectedIndex + 1);
                 this.SelectedToy = selectedToy;
+
             }
             catch (Exception ex)
             {
