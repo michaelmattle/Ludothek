@@ -74,5 +74,6 @@ namespace Ludothek.Application.View
                 // do stuff with exception
             }
         }
+        
     }
 }

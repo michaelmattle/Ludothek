@@ -37,10 +37,8 @@ namespace Ludothek.Application.Controller
                 listView.Items.Clear();
                 foreach (Toy toy in model)
                 {
-                    ListViewItem item = new ListViewItem(toy.Name);
-                    item.SubItems.Add(toy.Brand);
-                    item.SubItems.Add(toy.Category);
-                    item.SubItems.Add(toy.PricePerWeek.ToString());
+                    ListViewItem item = new ListViewItem(toy.ToyNo+"");
+                    item.SubItems.Add(toy.Name);
                     listView.Items.Add(item);
                 }
             }
