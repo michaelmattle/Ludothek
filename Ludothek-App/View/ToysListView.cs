@@ -15,14 +15,14 @@ namespace Ludothek.Application.View
     public partial class ToysListView : Form, IView
     {
         ToyModel _model;
-        ToyListViewController _controller;
+        ToyController _controller;
 
         public ToysListView(Model.ToyModel toymodel)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
             _model = toymodel;
-            _controller = new Controller.ToyListViewController(_model, this, listAllToys);
+            _controller = new Controller.ToyController(_model, this, listAllToys);
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace Ludothek.Application.View
 
         private void btnNewToy_Click(object sender, EventArgs e)
         {
-            NewToyView ntv = new NewToyView();
+            NewToyView ntv = new NewToyView(_model);
             ntv.ShowDialog();
         }
 
