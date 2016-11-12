@@ -54,5 +54,25 @@ namespace Ludothek.Application.View
             _controller.Update();
         }
         #endregion
+
+        private void listAllToys_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedIndex = listAllToys.SelectedIndices[0];
+                Toy selectedToy = _model.GetToyById(selectedIndex + 1);
+
+                // fill form fields
+                txtToyNo.Text = selectedToy.ToyNo + "";
+                txtToyName.Text = selectedToy.Name;
+                txtBrand.Text = selectedToy.Brand;
+                combCategory.Text = selectedToy.Category;
+                txtPricePerWeek.Text = selectedToy.PricePerWeek.ToString();
+            }
+            catch (Exception ex)
+            {
+                // do stuff with exception
+            }
+        }
     }
 }

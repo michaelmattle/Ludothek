@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Ludothek.Application.Model
 {
@@ -54,11 +55,16 @@ namespace Ludothek.Application.Model
             UpdateAllViews();
         }
 
-        public void ChangePerson(Toy toy, Toy newToy)
+        public void ChangeToy(Toy toy, Toy newToy)
         {
             int index = toys.IndexOf(toy);
             toys[index] = newToy;
             UpdateAllViews();
+        }
+
+        public Toy GetToyById(int id)
+        {
+            return toys.FirstOrDefault(c => c.ToyNo == id);
         }
 
         #region Implement Interface IEnumerator<Person>
