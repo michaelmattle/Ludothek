@@ -29,6 +29,10 @@ namespace Ludothek.Application.Controller
             model.AddToy(toy);
         }
 
+        public void ChangeToy(Toy toy, Toy newToy)
+        {
+            model.ChangeToy(toy, newToy);
+        }
 
         public void Update()
         {
