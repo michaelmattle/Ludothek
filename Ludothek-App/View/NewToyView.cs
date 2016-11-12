@@ -25,6 +25,7 @@ namespace Ludothek.Application.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            //use second constructor with id = List.count + 1
         }
     }
 }

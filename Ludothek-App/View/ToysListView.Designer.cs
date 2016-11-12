@@ -164,6 +164,7 @@
             this.txtToyNo.Location = new System.Drawing.Point(120, 16);
             this.txtToyNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtToyNo.Name = "txtToyNo";
+            this.txtToyNo.ReadOnly = true;
             this.txtToyNo.Size = new System.Drawing.Size(222, 20);
             this.txtToyNo.TabIndex = 5;
             // 
