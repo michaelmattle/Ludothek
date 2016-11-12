@@ -5,13 +5,13 @@ using System.Windows.Forms;
 
 namespace Ludothek.Application.Controller
 {
-    class MainController : BaseController
+    class CustomersController : BaseController
     {
-        MainModel model;
-        MainView view;
+        CustomerModel model;
+        CustomersView view;
         ListView listView;
 
-        public MainController(MainModel model, MainView view, ListView listView)
+        public CustomersController(CustomerModel model, CustomersView view, ListView listView)
         {
             this.model = model;
             this.view = view;
@@ -21,14 +21,13 @@ namespace Ludothek.Application.Controller
         public void Update()
         {
             listView.Items.Clear();
-
-            foreach (Rental due in model)
+            foreach (Customer customer in model)
             {
-                ListViewItem item = new ListViewItem(due.Toy.Name);
-                item.SubItems.Add(due.Customer.Name);
+                ListViewItem item = new ListViewItem(customer.Name);
+                item.SubItems.Add(customer.Surename);
+                item.SubItems.Add(customer.Name);
                 listView.Items.Add(item);
             }
-            
         }
     }
 }

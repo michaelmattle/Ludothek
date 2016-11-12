@@ -38,10 +38,10 @@
             // 
             this.listAllCustomers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.NachName});
-            this.listAllCustomers.Location = new System.Drawing.Point(13, 14);
-            this.listAllCustomers.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listAllCustomers.Location = new System.Drawing.Point(17, 18);
+            this.listAllCustomers.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.listAllCustomers.Name = "listAllCustomers";
-            this.listAllCustomers.Size = new System.Drawing.Size(516, 488);
+            this.listAllCustomers.Size = new System.Drawing.Size(687, 609);
             this.listAllCustomers.TabIndex = 26;
             this.listAllCustomers.UseCompatibleStateImageBehavior = false;
             this.listAllCustomers.View = System.Windows.Forms.View.Details;
@@ -53,9 +53,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(243, 510);
+            this.btnCancel.Location = new System.Drawing.Point(324, 638);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(140, 32);
+            this.btnCancel.Size = new System.Drawing.Size(187, 40);
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "Abbrechen";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(389, 510);
+            this.btnSelect.Location = new System.Drawing.Point(519, 638);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(140, 32);
+            this.btnSelect.Size = new System.Drawing.Size(187, 40);
             this.btnSelect.TabIndex = 28;
             this.btnSelect.Text = "Auswählen";
             this.btnSelect.UseVisualStyleBackColor = true;
@@ -73,14 +75,16 @@
             // 
             // CustomersView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 558);
+            this.ClientSize = new System.Drawing.Size(723, 698);
             this.Controls.Add(this.listAllCustomers);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSelect);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CustomersView";
             this.Text = "Kunden";
+            this.Load += new System.EventHandler(this.CustomersView_Load);
             this.ResumeLayout(false);
 
         }

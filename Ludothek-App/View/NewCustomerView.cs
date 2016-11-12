@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ludothek.Application.View
 {
-    public partial class NewCustomerView : Form
+    public partial class NewCustomerView : Form, IView
     {
         private CustomerListView customerListView;
 
@@ -19,7 +19,6 @@ namespace Ludothek.Application.View
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
             dateBirthday.MaxSelectionCount = 1;
-            this.customerListView = customerListView;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -40,6 +39,16 @@ namespace Ludothek.Application.View
             string EMail = txtMail.Text;
             bool ClubMember = cbClubMember.Checked;
 
+        }
+
+        private void NewCustomerView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void UpdateView()
+        {
+            throw new NotImplementedException();
         }
     }
 }

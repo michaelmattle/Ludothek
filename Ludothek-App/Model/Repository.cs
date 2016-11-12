@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ludothek.Application.Model
 {
-    public class Repository
+    public static class Repository
     {
-        public List<Rental> Rentals;
-        public List<Toy> Toys;
-        public List<Customer> Customers;
+        public static List<Rental> Rentals;
+        public static List<Toy> Toys;
+        public static List<Customer> Customers;
     }
 }
