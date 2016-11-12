@@ -8,14 +8,15 @@ namespace Ludothek.Application.View
     public partial class CustomerListView : Form, IView
     {
         CustomerModel _model;
-        CustomerListViewController _controller;
+        CustomerController _controller;
 
         public CustomerListView(CustomerModel model)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
             _model = model;
-            _controller = new CustomerListViewController(_model, this, listAllCustomers);
+            _controller = new CustomerController(_model, this, listAllCustomers);
+            _model.AddView(this);
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -25,7 +26,7 @@ namespace Ludothek.Application.View
 
         private void btnNewCustomer_Click(object sender, EventArgs e)
         {
-            NewCustomerView ncv = new NewCustomerView(this);
+            NewCustomerView ncv = new NewCustomerView(_model);
             ncv.ShowDialog();
         }
        

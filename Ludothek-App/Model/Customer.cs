@@ -35,9 +35,5 @@ namespace Ludothek.Application.Model
             ClubMember = clubmember;
             CustomerNo = customerno;
         }
-
-        public Customer()
-        {
-        }
     }
 }

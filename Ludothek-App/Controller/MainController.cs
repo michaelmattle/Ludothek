@@ -17,7 +17,6 @@ namespace Ludothek.Application.Controller
             this.view = view;
             this.listView = listView;
             model.AddDueRental(new Rental(new Toy("adf", "asdf", "adf", 33.3, false), new Customer("dasdf", "asfd", "asdf", "asdfadf", "asdfasdf", "asdfad", "asdfasdf", "asdfasdf", "asdfasdf", false, 123)));
-
         }
 
         public void Update()

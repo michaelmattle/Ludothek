@@ -8,16 +8,14 @@ namespace Ludothek.Application.View
 {
     public partial class MainView : Form, IView
     {
-        private readonly Repository _repo;
         private MainModel _model;
         private MainController _controller;
 
-        public MainView(Repository repository)
+        public MainView()
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
 
-            _repo = repository;
             _model = new MainModel();
             _controller = new MainController(_model, this, listDueReturns);
         }

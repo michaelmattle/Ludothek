@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Ludothek.Application.Controller;
+using Ludothek.Application.Model;
+using System;
 using System.Windows.Forms;
 
 namespace Ludothek.Application.View
 {
-    public partial class NewCustomerView : Form
+    public partial class NewCustomerView : Form, IView
     {
-        private CustomerListView customerListView;
+        CustomerModel _model;
+        CustomerController _controller;
 
-        public NewCustomerView(CustomerListView customerListView)
+        public NewCustomerView(CustomerModel model)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
             dateBirthday.MaxSelectionCount = 1;
-            this.customerListView = customerListView;
+
+            _model = model;
+            _controller = new CustomerController(_model, this);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -29,17 +27,40 @@ namespace Ludothek.Application.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string Name = txtName.Text;
-            string Surename = txtSurename.Text;
-            string Phone = txtPhoneNo.Text;
-            string Birthday = dateBirthday.SelectionRange.Start.ToString();
-            string Street = txtStreet.Text;
-            string ZIP = txtZIP.Text;
-            string Place = txtPlace.Text;
-            string Country = txtCountry.Text;
-            string EMail = txtMail.Text;
-            bool ClubMember = cbClubMember.Checked;
+            if (txtName.Text != "" && txtSurename.Text != "" && txtCountry.Text != "" && txtPlace.Text != "" && 
+                txtStreet.Text != "" && txtZIP.Text != "" && txtPhoneNo.Text != "" && txtMail.Text != "")
+            {
+                Customer newCustomer = new Customer(txtName.Text, txtSurename.Text, txtPhoneNo.Text, dateBirthday.SelectionRange.Start.ToString(),
+                txtStreet.Text, txtZIP.Text, txtPlace.Text, txtCountry.Text, txtMail.Text, cbClubMember.Checked,
+                _controller.getNoOfCustomers() + 1);
 
+                _controller.AddCustomer(newCustomer);
+                _model.UpdateAllViews();
+                resetTextFields();
+            }
+        }
+
+        private void NewCustomerView_Load(object sender, EventArgs e)
+        {
+            _model.AddView(this);
+        }
+
+        public void UpdateView()
+        {
+            _controller.Update();
+        }
+
+        public void resetTextFields()
+        {
+            txtName.Text = "";
+            txtSurename.Text = "";
+            txtPhoneNo.Text = "";
+            txtStreet.Text = "";
+            txtZIP.Text = "";
+            txtPlace.Text = "";
+            txtCountry.Text = "";
+            txtMail.Text = "";
+            cbClubMember.Checked = false;
         }
     }
 }

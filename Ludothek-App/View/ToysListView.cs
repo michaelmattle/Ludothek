@@ -39,13 +39,13 @@ namespace Ludothek.Application.View
         #region Observer
         private void ToysListView_Load(object sender, EventArgs e)
         {
-            //register observer
+            // register observer
            _model.AddView(this);
         }
 
         private void PersonenListView_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //deregister observer
+            // deregister observer
             _model.RemoveView(this);
         }
 
