@@ -39,15 +39,5 @@ namespace Ludothek.Application.Model
         public Customer()
         {
         }
-
-        public IEnumerator<Customer> GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

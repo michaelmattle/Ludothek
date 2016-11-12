@@ -1,5 +1,6 @@
 ﻿using Ludothek.Application.Model;
 using System.Windows.Forms;
+using System;
 
 namespace Ludothek.Application.Controller
 {
@@ -27,6 +28,11 @@ namespace Ludothek.Application.Controller
                 item.SubItems.Add(toy.PricePerWeek.ToString());
                 listView.Items.Add(item);
             }
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
         }
     }
 }
