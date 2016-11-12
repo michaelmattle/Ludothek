@@ -10,6 +10,8 @@ namespace Ludothek.Application.View
         public int selectedToyID;
         ToyModel _model;
         ToyController _controller;
+        public Toy SelectedToy { get; set; }
+ 
 
         public ToysView(Model.ToyModel toymodel)
         {
@@ -22,8 +24,11 @@ namespace Ludothek.Application.View
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-            Close();
+            if (this.SelectedToy != null)
+            {
+                DialogResult = DialogResult.OK;
+                Close();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -53,7 +58,9 @@ namespace Ludothek.Application.View
         {
             try
             {
-                selectedToyID = listAllToys.SelectedIndices[0] + 1;
+                int selectedIndex = listAllToys.SelectedIndices[0];
+                Toy selectedToy = _model.GetToyById(selectedIndex + 1);
+                this.SelectedToy = selectedToy;
             }
             catch (Exception ex)
             {
