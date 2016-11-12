@@ -18,6 +18,7 @@ namespace Ludothek.Application.Model
 
         public MainModel()
         {
+            dueRentals = new List<Rental>();
             #region Observer
             views = new List<IView>();
             #endregion
