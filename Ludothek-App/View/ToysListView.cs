@@ -25,9 +25,17 @@ namespace Ludothek.Application.View
             _controller = new Controller.ToyController(_model, this, listAllToys);
         }
 
+        // update selected toy data
         private void btnAccept_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int selectedIndex = listAllToys.SelectedIndices[0];
+                Toy selectedToy = _model.GetToyById(selectedIndex + 1);
+                Toy newToy = new Toy(txtToyName.Text, combCategory.Text, txtBrand.Text, Convert.ToDouble(txtPricePerWeek.Text), selectedToy.Available, selectedToy.ToyNo);
+                _controller.ChangeToy(selectedToy, newToy);
+            }
+            catch (Exception ex) { }
         }
 
         private void btnNewToy_Click(object sender, EventArgs e)
