@@ -49,6 +49,7 @@
             this.listAllCustomers.TabIndex = 26;
             this.listAllCustomers.UseCompatibleStateImageBehavior = false;
             this.listAllCustomers.View = System.Windows.Forms.View.Details;
+            this.listAllCustomers.SelectedIndexChanged += new System.EventHandler(this.listAllCustomers_SelectedIndexChanged);
             // 
             // Id
             // 

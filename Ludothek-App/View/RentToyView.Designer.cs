@@ -170,6 +170,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "RentToyView";
             this.Text = "Spielzeug ausleihen";
+            this.Load += new System.EventHandler(this.RentToyView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
