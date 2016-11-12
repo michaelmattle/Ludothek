@@ -10,8 +10,8 @@ namespace Ludothek.Application.View
     {
         private MainModel _model;
         private MainController _controller;
-        ToyModel toymodel;
-        CustomerModel customermodel;
+        ToyModel toyModel;
+        CustomerModel customerModel;
 
         public MainView()
         {
@@ -20,14 +20,13 @@ namespace Ludothek.Application.View
 
             _model = new MainModel();
             _controller = new MainController(_model, this, listDueReturns);
-            toymodel = new ToyModel();
-            customermodel = new CustomerModel();
+            toyModel = new ToyModel();
+            customerModel = new CustomerModel();
         }
         
         private void btnRentToy_Click(object sender, EventArgs e)
         {
-            RentToyView rentToyView = new RentToyView();
-            RentToyView rtv = new RentToyView();
+            RentToyView rtv = new RentToyView(customerModel, toyModel);
             rtv.ShowDialog();
         }
 
@@ -39,13 +38,13 @@ namespace Ludothek.Application.View
 
         private void btnToys_Click(object sender, EventArgs e)
         {
-            ToysListView toyListView = new ToysListView(toymodel);
+            ToysListView toyListView = new ToysListView(toyModel);
             toyListView.ShowDialog();
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            CustomerListView clv = new CustomerListView(customermodel);
+            CustomerListView clv = new CustomerListView(customerModel);
             clv.ShowDialog();
         }
 
@@ -56,7 +55,7 @@ namespace Ludothek.Application.View
         
         private void ausleihenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RentToyView rtv = new RentToyView();
+            RentToyView rtv = new RentToyView(customerModel, toyModel);
             rtv.ShowDialog();
         }
 
@@ -68,13 +67,13 @@ namespace Ludothek.Application.View
 
         private void übersichtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ToysListView toyListView = new ToysListView(toymodel);
+            ToysListView toyListView = new ToysListView(toyModel);
             toyListView.ShowDialog();
         }
 
         private void übersichtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CustomerListView clv = new CustomerListView(customermodel);
+            CustomerListView clv = new CustomerListView(customerModel);
             clv.ShowDialog();
         }
 

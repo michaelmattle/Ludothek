@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Ludothek.Application.Model;
+using System;
 using System.Windows.Forms;
 
 namespace Ludothek.Application.View
 {
     public partial class RentToyView : Form, IView
     {
-        public RentToyView()
+        private CustomerModel customerModel;
+        private ToyModel toyModel;
+
+        public RentToyView(CustomerModel customerModel, ToyModel toyModel)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
+
+            this.customerModel = customerModel;
+            this.toyModel = toyModel;
         }
 
         private void btnToys_Click(object sender, EventArgs e)
@@ -25,19 +25,15 @@ namespace Ludothek.Application.View
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-
+            CustomersView view = new CustomersView(customerModel);
+            view.ShowDialog();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
-
-        private void btnCalculatePrice_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void btnAccept_Click(object sender, EventArgs e)
         {
 

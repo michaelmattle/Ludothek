@@ -16,7 +16,7 @@ namespace Ludothek.Application.View
             FormBorderStyle = FormBorderStyle.FixedDialog;
             _model = model;
             _controller = new CustomerController(_model, this, listAllCustomers);
-
+            _model.AddView(this);
         }
         
         private void btnCancel_Click(object sender, EventArgs e)
