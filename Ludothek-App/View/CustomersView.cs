@@ -10,6 +10,8 @@ namespace Ludothek.Application.View
         CustomerModel _model;
         CustomerController _controller;
 
+        public Customer SelectedCustomer { get; set; }
+
         public CustomersView(CustomerModel model)
         {
             InitializeComponent();
@@ -21,12 +23,17 @@ namespace Ludothek.Application.View
         
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-
+            if(this.SelectedCustomer != null)
+            {
+                this.DialogResult = DialogResult.OK;
+                Close();
+            }
         }
         
         #region Observer
@@ -46,5 +53,18 @@ namespace Ludothek.Application.View
             _controller.Update();
         }
         #endregion
+
+        private void listAllCustomers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int selectedIndex = listAllCustomers.SelectedIndices[0];
+
+                Customer selectedCustomer = _model.GetCustomerById(selectedIndex + 1);
+
+                this.SelectedCustomer = selectedCustomer;
+            }
+            catch (Exception ex) {}
+        }
     }
 }

@@ -25,12 +25,22 @@ namespace Ludothek.Application.View
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            CustomersView view = new CustomersView(customerModel);
-            view.ShowDialog();
+            using (CustomersView view = new CustomersView(customerModel))
+            {
+                var result = view.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    //values preserved after close
+                    Customer selectedCustomer = view.SelectedCustomer;
+
+                    txtCustomerNo.Text = selectedCustomer.CustomerNo +"";
+                }
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            toyModel.RemoveView(this);
             Close();
         }
      
@@ -41,7 +51,12 @@ namespace Ludothek.Application.View
 
         public void UpdateView()
         {
-            throw new NotImplementedException();
+            // todo fix
+        }
+
+        private void RentToyView_Load(object sender, EventArgs e)
+        {
+            toyModel.AddView(this);
         }
     }
 }
