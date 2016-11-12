@@ -16,17 +16,17 @@ namespace Ludothek.Application.Controller
             this.model = model;
             this.view = view;
             this.listView = listView;
+            model.AddDueRental(new Rental(new Toy("adf", "asdf", "adf", 33.3), new Customer("dasdf", "asfd", "asdf", "asdfadf", "asdfasdf", "asdfad", "asdfasdf", "asdfasdf", "asdfasdf", false, 123)));
         }
 
         public void Update()
         {
             listView.Items.Clear();
 
-            foreach (Toy toy in model)
+            foreach (Rental due in model)
             {
-                ListViewItem item = new ListViewItem(toy.Name);
-                item.SubItems.Add(toy.CustomerNumber);
-                item.SubItems.Add(DateTime.Today.AddDays(7.0));
+                ListViewItem item = new ListViewItem(due.Toy.Name);
+                item.SubItems.Add(due.Customer.Name);
                 listView.Items.Add(item);
             }
         }

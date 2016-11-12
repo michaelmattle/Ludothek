@@ -65,9 +65,8 @@ namespace Ludothek.Application.View
             {
                 var toy = toyModel.GetToyById(SelectedToy.ToyNo);
                 SelectedToy.Available = false;
-                SelectedToy.CustomerNumber = SelectedCustomer.CustomerNo;
                 toyModel.ChangeToy(toy, SelectedToy);
-               
+
                 clearFields();
             }
         }
@@ -79,8 +78,8 @@ namespace Ludothek.Application.View
 
         private void clearFields()
         {
-            txtCustomerNo.Text = "";
-            txtToyNo.Text = "";
+            txtCustomerNo = "";
+            txtToyNo = "";
 
             SelectedToy = null;
             SelectedCustomer = null;

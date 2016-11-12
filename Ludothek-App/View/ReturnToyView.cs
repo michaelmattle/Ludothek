@@ -39,7 +39,6 @@ namespace Ludothek.Application.View
         {
             if (selectedToy != null)
             {
-                selectedToy.CustomerNumber = 0;
                 selectedToy.Available = true;
             }
             Close();

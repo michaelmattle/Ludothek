@@ -10,29 +10,29 @@ namespace Ludothek.Application.Model
 {
     class MainModel : BaseModel, IEnumerable<Rental>
     {
-        List<Toy> dueRentals;
-        
+        List<Rental> dueRentals;
+
         #region Observer
         List<IView> views;
         #endregion
 
         public MainModel()
         {
-            dueRentals = new List<Toy>();
+            dueRentals = new List<Rental>();
             #region Observer
             views = new List<IView>();
             #endregion
         }
 
-        public void AddDueRental(Toy toy)
+        public void AddDueRental(Rental rental)
         {
-            dueRentals.Add(toy);
+            dueRentals.Add(rental);
             UpdateAllViews();
         }
 
-        public void RemoveDueRental(Toy toy)
+        public void RemoveDueRental(Rental rental)
         {
-            dueRentals.Remove(toy);
+            dueRentals.Remove(rental);
             UpdateAllViews();
         }
 

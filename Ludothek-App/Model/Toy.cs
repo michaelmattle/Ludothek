@@ -9,7 +9,6 @@ namespace Ludothek.Application.Model
     public class Toy
     {
         public int ToyNo;
-        public int CustomerNumber;
         public string Name { get; set; }
         public string Category { get; set; }
         public string Brand { get; set; }
