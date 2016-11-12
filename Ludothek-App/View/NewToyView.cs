@@ -25,7 +25,6 @@ namespace Ludothek.Application.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
