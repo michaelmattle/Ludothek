@@ -32,7 +32,7 @@ namespace Ludothek.Application.View
 
         private void btnReturnToy_Click(object sender, EventArgs e)
         {
-            ReturnToyView returnTV = new ReturnToyView(toymodel);
+            ReturnToyView returnTV = new ReturnToyView(toyModel);
             returnTV.ShowDialog();
         }
 
@@ -61,7 +61,7 @@ namespace Ludothek.Application.View
 
         private void zurückgebenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReturnToyView returnTV = new ReturnToyView(toymodel);
+            ReturnToyView returnTV = new ReturnToyView(toyModel);
             returnTV.ShowDialog();
         }
 

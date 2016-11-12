@@ -26,7 +26,7 @@ namespace Ludothek.Application.View
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
         
         #region Observer

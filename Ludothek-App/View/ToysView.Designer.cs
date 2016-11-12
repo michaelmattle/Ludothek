@@ -38,13 +38,13 @@
             // 
             this.listAllToys.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.NachName});
-            this.listAllToys.Location = new System.Drawing.Point(13, 14);
-            this.listAllToys.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.listAllToys.Location = new System.Drawing.Point(9, 9);
             this.listAllToys.Name = "listAllToys";
-            this.listAllToys.Size = new System.Drawing.Size(516, 488);
+            this.listAllToys.Size = new System.Drawing.Size(345, 319);
             this.listAllToys.TabIndex = 15;
             this.listAllToys.UseCompatibleStateImageBehavior = false;
             this.listAllToys.View = System.Windows.Forms.View.Details;
+            this.listAllToys.SelectedIndexChanged += new System.EventHandler(this.listAllToys_SelectedIndexChanged);
             // 
             // NachName
             // 
@@ -53,9 +53,10 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(389, 510);
+            this.btnSelect.Location = new System.Drawing.Point(259, 331);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(140, 32);
+            this.btnSelect.Size = new System.Drawing.Size(93, 21);
             this.btnSelect.TabIndex = 25;
             this.btnSelect.Text = "Auswählen";
             this.btnSelect.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(243, 510);
+            this.btnCancel.Location = new System.Drawing.Point(162, 331);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(140, 32);
+            this.btnCancel.Size = new System.Drawing.Size(93, 21);
             this.btnCancel.TabIndex = 25;
             this.btnCancel.Text = "Abbrechen";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -73,14 +75,16 @@
             // 
             // ToysView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 554);
+            this.ClientSize = new System.Drawing.Size(360, 360);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.listAllToys);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ToysView";
             this.Text = "Spielzeuge";
+            this.Load += new System.EventHandler(this.ToysView_Load);
             this.ResumeLayout(false);
 
         }
