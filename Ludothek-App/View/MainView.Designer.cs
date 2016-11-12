@@ -34,9 +34,8 @@
             this.btnToys = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.listDueReturns = new System.Windows.Forms.ListView();
-            this.NachName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Spiel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Telefon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Kunde = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.btnProlong = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -65,7 +64,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnToys, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnCustomers, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 85);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -79,7 +78,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRentToy.Location = new System.Drawing.Point(6, 6);
-            this.btnRentToy.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRentToy.Margin = new System.Windows.Forms.Padding(6);
             this.btnRentToy.Name = "btnRentToy";
             this.btnRentToy.Size = new System.Drawing.Size(379, 327);
             this.btnRentToy.TabIndex = 0;
@@ -93,7 +92,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReturnToy.Location = new System.Drawing.Point(397, 6);
-            this.btnReturnToy.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReturnToy.Margin = new System.Windows.Forms.Padding(6);
             this.btnReturnToy.Name = "btnReturnToy";
             this.btnReturnToy.Size = new System.Drawing.Size(379, 327);
             this.btnReturnToy.TabIndex = 1;
@@ -107,7 +106,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnToys.Location = new System.Drawing.Point(6, 345);
-            this.btnToys.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnToys.Margin = new System.Windows.Forms.Padding(6);
             this.btnToys.Name = "btnToys";
             this.btnToys.Size = new System.Drawing.Size(379, 328);
             this.btnToys.TabIndex = 2;
@@ -121,7 +120,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCustomers.Location = new System.Drawing.Point(397, 345);
-            this.btnCustomers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCustomers.Margin = new System.Windows.Forms.Padding(6);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Size = new System.Drawing.Size(379, 328);
             this.btnCustomers.TabIndex = 3;
@@ -135,32 +134,26 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listDueReturns.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.NachName,
             this.Spiel,
-            this.Telefon});
+            this.Kunde});
             this.tableLayoutPanel2.SetColumnSpan(this.listDueReturns, 2);
             this.listDueReturns.Location = new System.Drawing.Point(6, 84);
-            this.listDueReturns.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listDueReturns.Margin = new System.Windows.Forms.Padding(6);
             this.listDueReturns.Name = "listDueReturns";
             this.listDueReturns.Size = new System.Drawing.Size(550, 748);
             this.listDueReturns.TabIndex = 6;
             this.listDueReturns.UseCompatibleStateImageBehavior = false;
             this.listDueReturns.View = System.Windows.Forms.View.Details;
             // 
-            // NachName
-            // 
-            this.NachName.Text = "Name";
-            this.NachName.Width = 133;
-            // 
             // Spiel
             // 
-            this.Spiel.Text = "Vorname";
+            this.Spiel.Text = "Spiel";
             this.Spiel.Width = 173;
             // 
-            // Telefon
+            // Kunde
             // 
-            this.Telefon.Text = "Telefon";
-            this.Telefon.Width = 113;
+            this.Kunde.Text = "Kunde";
+            this.Kunde.Width = 113;
             // 
             // label1
             // 
@@ -182,7 +175,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnProlong.Location = new System.Drawing.Point(287, 6);
-            this.btnProlong.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnProlong.Margin = new System.Windows.Forms.Padding(6);
             this.btnProlong.Name = "btnProlong";
             this.btnProlong.Size = new System.Drawing.Size(269, 66);
             this.btnProlong.TabIndex = 5;
@@ -199,7 +192,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnProlong, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(800, 6);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.403669F));
@@ -215,7 +208,7 @@
             this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel1);
             this.flowLayoutPanel1.Controls.Add(this.tableLayoutPanel2);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 52);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1370, 854);
             this.flowLayoutPanel1.TabIndex = 8;
@@ -287,7 +280,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainView";
             this.Text = "Ludothek";
             this.Load += new System.EventHandler(this.MainView_Load);
@@ -312,9 +305,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnProlong;
         private System.Windows.Forms.ListView listDueReturns;
-        private System.Windows.Forms.ColumnHeader NachName;
         private System.Windows.Forms.ColumnHeader Spiel;
-        private System.Windows.Forms.ColumnHeader Telefon;
+        private System.Windows.Forms.ColumnHeader Kunde;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.MenuStrip menuStrip1;

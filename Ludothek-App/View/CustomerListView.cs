@@ -8,14 +8,14 @@ namespace Ludothek.Application.View
     public partial class CustomerListView : Form, IView
     {
         CustomerModel _model;
-        CustomerController _controller;
+        CustomerListViewController _controller;
 
         public CustomerListView(CustomerModel model)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
             _model = model;
-            _controller = new CustomerController(_model, this, listAllCustomers);
+            _controller = new CustomerListViewController(_model, this, listAllCustomers);
         }
 
         private void btnAccept_Click(object sender, EventArgs e)

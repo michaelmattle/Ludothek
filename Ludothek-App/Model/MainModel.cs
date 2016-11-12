@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace Ludothek.Application.Model
 {
-    class MainModel : BaseModel
+    class MainModel : BaseModel, IEnumerable<Rental>
     {
-        List<string> returns;
+        List<Rental> dueRentals;
 
         #region Observer
         List<IView> views;
@@ -20,6 +21,25 @@ namespace Ludothek.Application.Model
             #region Observer
             views = new List<IView>();
             #endregion
+        }
+
+        public void AddDueRental(Rental rental)
+        {
+            dueRentals.Add(rental);
+            UpdateAllViews();
+        }
+
+        public void RemoveDueRental(Rental rental)
+        {
+            dueRentals.Remove(rental);
+            UpdateAllViews();
+        }
+
+        public void ChangeDueRental(Rental rental, Rental newRental)
+        {
+            int index = dueRentals.IndexOf(rental);
+            dueRentals[index] = newRental;
+            UpdateAllViews();
         }
 
         #region Observer
@@ -41,7 +61,18 @@ namespace Ludothek.Application.Model
                 view.UpdateView();
             }
         }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return dueRentals.GetEnumerator();
+        }
+
+        public IEnumerator<Rental> GetEnumerator()
+        {
+            return dueRentals.GetEnumerator();
+        }
+
         #endregion
-       
+
     }
 }

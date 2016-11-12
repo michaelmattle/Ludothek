@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\BaseController.cs" />
-    <Compile Include="Controller\CustomerController.cs" />
+    <Compile Include="Controller\CustomerListViewController.cs" />
     <Compile Include="Controller\ToysViewController.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Controller\ToyListViewController.cs" />
@@ -58,6 +58,7 @@
     <Compile Include="Model\Repository.cs" />
     <Compile Include="Model\ToyModel.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Rental.cs" />
     <Compile Include="Toy.cs" />
     <Compile Include="View\CustomerListView.cs">
       <SubType>Form</SubType>

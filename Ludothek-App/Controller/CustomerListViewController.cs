@@ -5,21 +5,17 @@ using System.Windows.Forms;
 
 namespace Ludothek.Application.Controller
 {
-    class CustomerController : BaseController
+    class CustomerListViewController : BaseController
     {
         CustomerModel model;
         CustomerListView view;
         ListView listView;
 
-        public CustomerController(CustomerModel model, CustomerListView view, ListView listView)
+        public CustomerListViewController(CustomerModel model, CustomerListView view, ListView listView)
         {
             this.model = model;
             this.view = view;
             this.listView = listView;
-        }
-
-        public CustomerController()
-        {
         }
 
         public void Update()
@@ -29,7 +25,7 @@ namespace Ludothek.Application.Controller
             {
                 ListViewItem item = new ListViewItem(customer.Name);
                 item.SubItems.Add(customer.Surename);
-                item.SubItems.Add(customer.Phone);
+                item.SubItems.Add(customer.Name);
                 listView.Items.Add(item);
             }
         }

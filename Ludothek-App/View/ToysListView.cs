@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ludothek.Application.Controller;
+using Ludothek.Application.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +14,15 @@ namespace Ludothek.Application.View
 {
     public partial class ToysListView : Form, IView
     {
-        Model.ToyModel model;
-        Controller.ToyListViewController controller;
+        ToyModel _model;
+        ToyListViewController _controller;
 
         public ToysListView(Model.ToyModel toymodel)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            model = toymodel;
-            controller = new Controller.ToyListViewController(model, this, listAllToys);
-        }
-
-        public ToysListView()
-        {
+            _model = toymodel;
+            _controller = new Controller.ToyListViewController(_model, this, listAllToys);
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -38,22 +36,23 @@ namespace Ludothek.Application.View
         }
 
         #region Observer
-        private void ToyListView_Load(object sender, EventArgs e)
+        private void ToysListView_Load(object sender, EventArgs e)
         {
             //register observer
-            model.AddView(this);
+           _model.AddView(this);
         }
 
         private void PersonenListView_FormClosing(object sender, FormClosingEventArgs e)
         {
             //deregister observer
-            model.RemoveView(this);
+            _model.RemoveView(this);
         }
 
         public void UpdateView()
         {
-            controller.Update();
+            _controller.Update();
         }
         #endregion
+
     }
 }

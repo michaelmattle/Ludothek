@@ -20,25 +20,15 @@ namespace Ludothek.Application.Controller
 
         public void Update()
         {
-
             listView.Items.Clear();
-
-            ListViewItem item = new ListViewItem("adsf");
-            item.SubItems.Add("hello");
-            item.SubItems.Add("dario");
-            listView.Items.Add(item);
-            /*
-            foreach (Custom in model)
+            
+            foreach (Rental due in model)
             {
-                ListViewItem item = new ListViewItem(customer.Name);
-                item.SubItems.Add(customer.Surename);
-                item.SubItems.Add(customer.Phone);
+                ListViewItem item = new ListViewItem(due.Toy.Name);
+                item.SubItems.Add(due.Customer.Name);
                 listView.Items.Add(item);
             }
-
-            add returns to model
-
-            */
+            
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Ludothek.Application.View
 {
-    public partial class RentToyView : Form
+    public partial class RentToyView : Form, IView
     {
         public RentToyView()
         {
@@ -41,6 +41,11 @@ namespace Ludothek.Application.View
         private void btnAccept_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void UpdateView()
+        {
+            throw new NotImplementedException();
         }
     }
 }
