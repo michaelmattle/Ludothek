@@ -49,7 +49,6 @@
     <Compile Include="Controller\BaseController.cs" />
     <Compile Include="Controller\CustomerController.cs" />
     <Compile Include="Model\Customer.cs" />
-    <Compile Include="Globals.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\Repository.cs" />

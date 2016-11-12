@@ -10,12 +10,12 @@ namespace Ludothek.Application.View
         CustomerModel _model;
         CustomerController _controller;
 
-        MainView MV;
-        public CustomerListView(MainView mv)
+        public CustomerListView(CustomerModel model)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            MV = mv;
+            _model = model;
+            _controller = new CustomerController();
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -28,8 +28,7 @@ namespace Ludothek.Application.View
             NewCustomerView ncv = new NewCustomerView(MV);
             ncv.ShowDialog();
         }
-        PersonenModel personenModel;
-        PersonenListViewController personelListViewController;
+       
 
         public PersonenListView(PersonenModel model)
         {
