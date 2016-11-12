@@ -38,7 +38,7 @@ namespace Ludothek.Application.Model
 
         public void UpdateAllViews()
         {
-            foreach (IView view in views)
+            foreach (MainView view in views)
             {
                 view.UpdateView();
             }
