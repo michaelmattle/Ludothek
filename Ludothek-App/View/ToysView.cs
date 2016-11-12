@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Ludothek.Application.Controller;
+using Ludothek.Application.Model;
+using System;
 using System.Windows.Forms;
 
 namespace Ludothek.Application.View
 {
     public partial class ToysView : Form, IView
     {
-        public int selectedToyID;
+        public Toy SelectedToy { get; set; }
         Model.ToyModel _model;
         Controller.ToyController _controller;
 
@@ -20,8 +22,11 @@ namespace Ludothek.Application.View
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-            Close();
+            if (this.SelectedToy != null)
+            {
+                DialogResult = DialogResult.OK;
+                Close();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -51,7 +56,9 @@ namespace Ludothek.Application.View
         {
             try
             {
-                selectedToyID = listAllToys.SelectedIndices[0] + 1;
+                int selectedIndex = listAllToys.SelectedIndices[0];
+                Toy selectedToy = _model.GetToyById(selectedIndex + 1);
+                this.SelectedToy = selectedToy;
             }
             catch (Exception ex)
             {
