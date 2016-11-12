@@ -8,6 +8,8 @@ namespace Ludothek.Application.View
     {
         private CustomerModel customerModel;
         private ToyModel toyModel;
+        private Toy SelectedToy;
+        private Customer SelectedCustomer;
 
         public RentToyView(CustomerModel customerModel, ToyModel toyModel)
         {
@@ -26,12 +28,12 @@ namespace Ludothek.Application.View
                 if (result == DialogResult.OK)
                 {
                     //values preserved after close
-                    Toy selectedToy = view.SelectedToy;
+                    this.SelectedToy = view.SelectedToy;
 
-                    txtToyNo.Text = selectedToy.ToyNo + "";
+                    txtToyNo.Text = this.SelectedToy.ToyNo + "";
 
 
-                    lblPricePerWeek.Text = selectedToy.PricePerWeek + "";
+                    lblPricePerWeek.Text = this.SelectedToy.PricePerWeek + "";
                 }
             }
         }
@@ -44,9 +46,9 @@ namespace Ludothek.Application.View
                 if (result == DialogResult.OK)
                 {
                     //values preserved after close
-                    Customer selectedCustomer = view.SelectedCustomer;
+                    this.SelectedCustomer = view.SelectedCustomer;
 
-                    txtCustomerNo.Text = selectedCustomer.CustomerNo +"";
+                    txtCustomerNo.Text = this.SelectedCustomer.CustomerNo +"";
                 }
             }
         }
@@ -59,7 +61,12 @@ namespace Ludothek.Application.View
      
         private void btnAccept_Click(object sender, EventArgs e)
         {
-
+            if(SelectedToy != null && SelectedCustomer != null)
+            {
+                var toy = toyModel.GetToyById(SelectedToy.ToyNo);
+                SelectedToy.Available = false;
+                toyModel.ChangeToy(toy, SelectedToy);
+            }
         }
 
         public void UpdateView()
