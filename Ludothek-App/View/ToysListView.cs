@@ -32,7 +32,8 @@ namespace Ludothek.Application.View
 
         private void btnNewToy_Click(object sender, EventArgs e)
         {
-
+            NewToyView ntv = new NewToyView();
+            ntv.ShowDialog();
         }
 
         #region Observer
@@ -53,6 +54,5 @@ namespace Ludothek.Application.View
             _controller.Update();
         }
         #endregion
-
     }
 }
