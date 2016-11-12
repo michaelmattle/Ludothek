@@ -11,6 +11,7 @@ namespace Ludothek
         public static void Main()
         {
             Repository repo = new Repository();
+            
 
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);

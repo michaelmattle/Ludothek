@@ -12,19 +12,13 @@ namespace Ludothek.Application.View
 {
     public partial class NewCustomerView : Form
     {
-        MainView MV;
         private CustomerListView customerListView;
 
-        public NewCustomerView(MainView mv)
+        public NewCustomerView(CustomerListView customerListView)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
             dateBirthday.MaxSelectionCount = 1;
-            MV = mv;
-        }
-
-        public NewCustomerView(CustomerListView customerListView)
-        {
             this.customerListView = customerListView;
         }
 

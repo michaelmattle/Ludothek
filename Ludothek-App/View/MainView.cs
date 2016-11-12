@@ -6,10 +6,11 @@ using System.Windows.Forms;
 
 namespace Ludothek.Application.View
 {
-    public partial class MainView : Form
+    public partial class MainView : Form, IView
     {
         private readonly Repository _repo;
-        private BaseController _controller;
+        private MainModel _model;
+        private MainController _controller;
 
         public MainView(Repository repository)
         {
@@ -17,8 +18,10 @@ namespace Ludothek.Application.View
             FormBorderStyle = FormBorderStyle.FixedDialog;
 
             _repo = repository;
+            _model = new MainModel();
+            _controller = new MainController(_model, this, listDueReturns);
         }
-    
+
 
 
         private void btnRentToy_Click(object sender, EventArgs e)
@@ -74,9 +77,23 @@ namespace Ludothek.Application.View
             clv.ShowDialog();
         }
 
+        #region Observer
         private void MainView_Load(object sender, EventArgs e)
+        {
+            // register observer
+            _model.AddView(this);
+        }
+
+        private void MainView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //deregister observer
+            _model.RemoveView(this);
+        }
+
+        public void UpdateView()
         {
             _controller.Update();
         }
+        #endregion
     }
 }

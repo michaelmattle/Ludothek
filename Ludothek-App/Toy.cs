@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ludothek.Application.Model
 {
-    public class Toy : BaseModel
+    public class Toy
     {
         public int ToyNo;
         public string Name { get; set; }
