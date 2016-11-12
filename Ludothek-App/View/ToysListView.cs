@@ -12,10 +12,15 @@ namespace Ludothek.Application.View
 {
     public partial class ToysListView : Form
     {
-        public ToysListView()
+        Model.ToyModel model;
+        Controller.ToyController controller;
+
+        public ToysListView(Model.ToyModel toymodel)
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            model = toymodel;
+            controller = new Controller.ToyController(model, this, listAllToys);
         }
 
         private void btnAccept_Click(object sender, EventArgs e)

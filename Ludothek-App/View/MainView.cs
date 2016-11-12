@@ -15,12 +15,10 @@ namespace Ludothek.Application.View
     {
         List<Customer> Customers;
         List<Toy> Toys;
-        int Count;
 
         public MainView()
         {
             Customers = new List<Customer>(0);
-            Count++;
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.FixedDialog;
         }
@@ -80,9 +78,8 @@ namespace Ludothek.Application.View
 
         public void addCustomer(string name, string surename, string phone, string birthday, string street, string zip, string place, string country, string email, bool clubmember)
         {
-            Customer customer = new Customer(name, surename, phone, birthday, street, zip, place, country, email, clubmember, Count);
+            Customer customer = new Customer(name, surename, phone, birthday, street, zip, place, country, email, clubmember, 1);
             Customers.Add(customer);
-            Count++;
         }
 
         public List<List<string>> getCustomer()
