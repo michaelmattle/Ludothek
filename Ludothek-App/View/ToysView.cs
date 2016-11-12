@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ludothek.Application.Controller;
+using Ludothek.Application.Model;
+using System;
 using System.Windows.Forms;
 
 namespace Ludothek.Application.View
@@ -6,8 +8,8 @@ namespace Ludothek.Application.View
     public partial class ToysView : Form, IView
     {
         public int selectedToyID;
-        Model.ToyModel _model;
-        Controller.ToyController _controller;
+        ToyModel _model;
+        ToyController _controller;
 
         public ToysView(Model.ToyModel toymodel)
         {

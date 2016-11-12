@@ -122,12 +122,14 @@
             // lblPricePerWeek
             // 
             this.lblPricePerWeek.AutoSize = true;
-            this.lblPricePerWeek.Location = new System.Drawing.Point(540, 198);
+            this.lblPricePerWeek.Location = new System.Drawing.Point(475, 198);
             this.lblPricePerWeek.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPricePerWeek.MinimumSize = new System.Drawing.Size(100, 0);
             this.lblPricePerWeek.Name = "lblPricePerWeek";
-            this.lblPricePerWeek.Size = new System.Drawing.Size(24, 25);
+            this.lblPricePerWeek.Size = new System.Drawing.Size(100, 25);
             this.lblPricePerWeek.TabIndex = 5;
             this.lblPricePerWeek.Text = "0";
+            this.lblPricePerWeek.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnCancel
             // 

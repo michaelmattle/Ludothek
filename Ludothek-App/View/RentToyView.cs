@@ -26,9 +26,12 @@ namespace Ludothek.Application.View
                 if (result == DialogResult.OK)
                 {
                     //values preserved after close
-                    Toy selectedToy = view.SelectedToy;
+                    Toy selectedToy = toyModel.GetToyById(view.selectedToyID);
 
                     txtToyNo.Text = selectedToy.ToyNo + "";
+
+
+                    lblPricePerWeek.Text = selectedToy.PricePerWeek + "";
                 }
             }
         }
