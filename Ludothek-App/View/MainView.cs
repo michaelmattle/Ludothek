@@ -10,6 +10,8 @@ namespace Ludothek.Application.View
     {
         private MainModel _model;
         private MainController _controller;
+        ToyModel toymodel;
+        CustomerModel customermodel;
 
         public MainView()
         {
@@ -18,6 +20,8 @@ namespace Ludothek.Application.View
 
             _model = new MainModel();
             _controller = new MainController(_model, this, listDueReturns);
+            toymodel = new ToyModel();
+            customermodel = new CustomerModel();
         }
         
         private void btnRentToy_Click(object sender, EventArgs e)
@@ -35,15 +39,13 @@ namespace Ludothek.Application.View
 
         private void btnToys_Click(object sender, EventArgs e)
         {
-            ToyModel model = new ToyModel();
-            ToysListView toyListView = new ToysListView(model);
+            ToysListView toyListView = new ToysListView(toymodel);
             toyListView.ShowDialog();
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            CustomerModel model = new CustomerModel();
-            CustomerListView clv = new CustomerListView(model);
+            CustomerListView clv = new CustomerListView(customermodel);
             clv.ShowDialog();
         }
 
@@ -66,14 +68,13 @@ namespace Ludothek.Application.View
 
         private void übersichtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ToyModel model = new ToyModel();
-            ToysListView toyListView = new ToysListView(model);
+            ToysListView toyListView = new ToysListView(toymodel);
             toyListView.ShowDialog();
         }
 
         private void übersichtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CustomerListView clv = new CustomerListView(new CustomerModel());
+            CustomerListView clv = new CustomerListView(customermodel);
             clv.ShowDialog();
         }
 

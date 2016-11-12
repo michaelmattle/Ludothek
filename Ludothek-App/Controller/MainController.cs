@@ -29,7 +29,6 @@ namespace Ludothek.Application.Controller
                 item.SubItems.Add(due.Customer.Name);
                 listView.Items.Add(item);
             }
-            
         }
     }
 }

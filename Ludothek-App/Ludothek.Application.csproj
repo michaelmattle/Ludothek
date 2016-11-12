@@ -48,9 +48,10 @@
   <ItemGroup>
     <Compile Include="Controller\BaseController.cs" />
     <Compile Include="Controller\CustomerController.cs" />
-    <Compile Include="Controller\ToysViewController.cs" />
+    <Compile Include="Controller\ToyController.cs" />
+    <None Include="Controller\ToysViewController.cs.old" />
     <Compile Include="Controller\MainController.cs" />
-    <Compile Include="Controller\ToyListViewController.cs" />
+    <None Include="Controller\ToyListViewController.cs.old" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\CustomerModel.cs" />
