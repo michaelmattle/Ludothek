@@ -47,8 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\BaseController.cs" />
-    <Compile Include="Controller\CustomersController.cs" />
-    <Compile Include="Controller\CustomerListViewController.cs" />
+    <Compile Include="Controller\CustomerController.cs" />
     <Compile Include="Controller\ToysViewController.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Controller\ToyListViewController.cs" />

@@ -65,9 +65,9 @@
             this.groupBox3.Controls.Add(this.txtMail);
             this.groupBox3.Controls.Add(this.txtPhoneNo);
             this.groupBox3.Location = new System.Drawing.Point(16, 699);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(709, 126);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
@@ -96,7 +96,7 @@
             // txtMail
             // 
             this.txtMail.Location = new System.Drawing.Point(240, 31);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(436, 31);
             this.txtMail.TabIndex = 6;
@@ -104,7 +104,7 @@
             // txtPhoneNo
             // 
             this.txtPhoneNo.Location = new System.Drawing.Point(240, 75);
-            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.Size = new System.Drawing.Size(436, 31);
             this.txtPhoneNo.TabIndex = 6;
@@ -123,7 +123,7 @@
             // 
             this.cbClubMember.AutoSize = true;
             this.cbClubMember.Location = new System.Drawing.Point(260, 849);
-            this.cbClubMember.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbClubMember.Margin = new System.Windows.Forms.Padding(4);
             this.cbClubMember.Name = "cbClubMember";
             this.cbClubMember.Size = new System.Drawing.Size(28, 27);
             this.cbClubMember.TabIndex = 18;
@@ -140,9 +140,9 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(16, 480);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(709, 205);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
@@ -151,7 +151,7 @@
             // txtStreet
             // 
             this.txtStreet.Location = new System.Drawing.Point(240, 35);
-            this.txtStreet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStreet.Margin = new System.Windows.Forms.Padding(4);
             this.txtStreet.Name = "txtStreet";
             this.txtStreet.Size = new System.Drawing.Size(439, 31);
             this.txtStreet.TabIndex = 6;
@@ -159,7 +159,7 @@
             // txtCountry
             // 
             this.txtCountry.Location = new System.Drawing.Point(240, 154);
-            this.txtCountry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCountry.Margin = new System.Windows.Forms.Padding(4);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(439, 31);
             this.txtCountry.TabIndex = 6;
@@ -167,7 +167,7 @@
             // txtPlace
             // 
             this.txtPlace.Location = new System.Drawing.Point(240, 115);
-            this.txtPlace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPlace.Margin = new System.Windows.Forms.Padding(4);
             this.txtPlace.Name = "txtPlace";
             this.txtPlace.Size = new System.Drawing.Size(439, 31);
             this.txtPlace.TabIndex = 6;
@@ -175,7 +175,7 @@
             // txtZIP
             // 
             this.txtZIP.Location = new System.Drawing.Point(240, 75);
-            this.txtZIP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtZIP.Margin = new System.Windows.Forms.Padding(4);
             this.txtZIP.Name = "txtZIP";
             this.txtZIP.Size = new System.Drawing.Size(439, 31);
             this.txtZIP.TabIndex = 6;
@@ -229,9 +229,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(711, 452);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
@@ -240,7 +240,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(245, 68);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(439, 31);
             this.txtName.TabIndex = 5;
@@ -248,7 +248,7 @@
             // txtSurename
             // 
             this.txtSurename.Location = new System.Drawing.Point(245, 29);
-            this.txtSurename.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSurename.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurename.Name = "txtSurename";
             this.txtSurename.Size = new System.Drawing.Size(439, 31);
             this.txtSurename.TabIndex = 5;
@@ -293,7 +293,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(347, 900);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(187, 40);
             this.btnCancel.TabIndex = 21;
@@ -304,7 +304,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(541, 900);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(187, 40);
             this.btnAdd.TabIndex = 21;
@@ -316,7 +316,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(744, 952);
+            this.ClientSize = new System.Drawing.Size(744, 960);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.groupBox3);
@@ -324,7 +324,7 @@
             this.Controls.Add(this.cbClubMember);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NewCustomerView";
             this.Text = "Neuer Kunde";
             this.Load += new System.EventHandler(this.NewCustomerView_Load);
