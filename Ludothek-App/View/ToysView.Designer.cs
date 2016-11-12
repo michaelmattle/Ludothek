@@ -88,7 +88,6 @@
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.listAllToys);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "ToysView";
             this.Text = "Spielzeuge";
             this.Load += new System.EventHandler(this.ToysView_Load);
             this.ResumeLayout(false);

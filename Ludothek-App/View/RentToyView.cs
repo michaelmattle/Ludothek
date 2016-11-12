@@ -66,12 +66,23 @@ namespace Ludothek.Application.View
                 var toy = toyModel.GetToyById(SelectedToy.ToyNo);
                 SelectedToy.Available = false;
                 toyModel.ChangeToy(toy, SelectedToy);
+
+                clearFields();
             }
         }
 
         public void UpdateView()
         {
             // todo fix
+        }
+
+        private void clearFields()
+        {
+            txtCustomerNo = "";
+            txtToyNo = "";
+
+            SelectedToy = null;
+            SelectedCustomer = null;
         }
 
         private void RentToyView_Load(object sender, EventArgs e)
