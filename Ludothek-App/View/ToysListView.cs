@@ -76,6 +76,21 @@ namespace Ludothek.Application.View
                 txtBrand.Text = selectedToy.Brand;
                 combCategory.Text = selectedToy.Category;
                 txtPricePerWeek.Text = selectedToy.PricePerWeek.ToString();
+
+                if (selectedToy.Available == false)
+                {
+                    txtToyName.ReadOnly = true;
+                    txtBrand.ReadOnly = true;
+                    txtPricePerWeek.ReadOnly = true;
+                    btnAccept.Enabled = false;
+                }
+                else
+                {
+                    txtToyName.ReadOnly = false;
+                    txtBrand.ReadOnly = false;
+                    txtPricePerWeek.ReadOnly = false;
+                    btnAccept.Enabled = true;
+                }
             }
             catch (Exception ex)
             {

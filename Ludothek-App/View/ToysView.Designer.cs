@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.listAllToys = new System.Windows.Forms.ListView();
+            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSelect = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listAllToys
@@ -40,14 +40,17 @@
             this.listAllToys.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.Name});
-            this.listAllToys.Location = new System.Drawing.Point(18, 17);
-            this.listAllToys.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listAllToys.Location = new System.Drawing.Point(9, 9);
             this.listAllToys.Name = "listAllToys";
-            this.listAllToys.Size = new System.Drawing.Size(686, 610);
+            this.listAllToys.Size = new System.Drawing.Size(345, 319);
             this.listAllToys.TabIndex = 15;
             this.listAllToys.UseCompatibleStateImageBehavior = false;
             this.listAllToys.View = System.Windows.Forms.View.Details;
             this.listAllToys.SelectedIndexChanged += new System.EventHandler(this.listAllToys_SelectedIndexChanged);
+            // 
+            // Id
+            // 
+            this.Id.Text = "Id";
             // 
             // Name
             // 
@@ -56,39 +59,36 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(518, 637);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelect.Location = new System.Drawing.Point(259, 331);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(186, 40);
-            this.btnSelect.TabIndex = 25;
+            this.btnSelect.Size = new System.Drawing.Size(93, 21);
+            this.btnSelect.TabIndex = 2;
             this.btnSelect.Text = "Auswählen";
             this.btnSelect.UseVisualStyleBackColor = true;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(324, 637);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Location = new System.Drawing.Point(162, 331);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(186, 40);
-            this.btnCancel.TabIndex = 25;
+            this.btnCancel.Size = new System.Drawing.Size(93, 21);
+            this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Abbrechen";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // Id
-            // 
-            this.Id.Text = "Id";
-            // 
             // ToysView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 692);
+            this.ClientSize = new System.Drawing.Size(360, 360);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.listAllToys);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "ToysView";
             this.Text = "Spielzeuge";
             this.Load += new System.EventHandler(this.ToysView_Load);
             this.ResumeLayout(false);

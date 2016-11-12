@@ -6,6 +6,7 @@ namespace Ludothek.Application.View
 {
     public partial class ReturnToyView : Form
     {
+        private Toy selectedToy;
         Model.ToyModel _model;
         public ReturnToyView(Model.ToyModel toymodel)
         {
@@ -22,7 +23,8 @@ namespace Ludothek.Application.View
                 if (result == DialogResult.OK)
                 {
                     //values preserved after close
-                    Toy selectedToy = view.SelectedToy;
+                    selectedToy = view.SelectedToy;
+                    selectedToy.Available = true;
                     txtToyNo.Text = selectedToy.ToyNo + "";
                 }
             }
@@ -35,7 +37,11 @@ namespace Ludothek.Application.View
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-
+            if (selectedToy != null)
+            {
+                selectedToy.Available = true;
+            }
+            Close();
         }
     }
 }

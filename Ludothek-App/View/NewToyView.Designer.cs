@@ -79,7 +79,7 @@
             this.txtPricePerWeek.Margin = new System.Windows.Forms.Padding(2);
             this.txtPricePerWeek.Name = "txtPricePerWeek";
             this.txtPricePerWeek.Size = new System.Drawing.Size(189, 20);
-            this.txtPricePerWeek.TabIndex = 8;
+            this.txtPricePerWeek.TabIndex = 4;
             // 
             // label5
             // 
@@ -102,7 +102,7 @@
             this.combCategory.Margin = new System.Windows.Forms.Padding(2);
             this.combCategory.Name = "combCategory";
             this.combCategory.Size = new System.Drawing.Size(221, 21);
-            this.combCategory.TabIndex = 6;
+            this.combCategory.TabIndex = 3;
             // 
             // txtToyName
             // 
@@ -110,7 +110,7 @@
             this.txtToyName.Margin = new System.Windows.Forms.Padding(2);
             this.txtToyName.Name = "txtToyName";
             this.txtToyName.Size = new System.Drawing.Size(221, 20);
-            this.txtToyName.TabIndex = 5;
+            this.txtToyName.TabIndex = 2;
             // 
             // txtBrand
             // 
@@ -118,7 +118,7 @@
             this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.Size = new System.Drawing.Size(221, 20);
-            this.txtBrand.TabIndex = 5;
+            this.txtBrand.TabIndex = 1;
             // 
             // label4
             // 
@@ -156,7 +156,7 @@
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(93, 21);
-            this.btnCancel.TabIndex = 24;
+            this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Abbrechen";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -167,7 +167,7 @@
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(93, 21);
-            this.btnAdd.TabIndex = 24;
+            this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Hinzufügen";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);

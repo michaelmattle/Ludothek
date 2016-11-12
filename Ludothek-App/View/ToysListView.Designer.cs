@@ -44,39 +44,39 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listAllToys = new System.Windows.Forms.ListView();
-            this.NachName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.NachName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(952, 588);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(476, 306);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(181, 25);
+            this.label12.Size = new System.Drawing.Size(90, 13);
             this.label12.TabIndex = 25;
             this.label12.Text = "Neues Spielzeug:";
             // 
             // btnAccept
             // 
-            this.btnAccept.Location = new System.Drawing.Point(568, 581);
-            this.btnAccept.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAccept.Location = new System.Drawing.Point(284, 302);
+            this.btnAccept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAccept.Name = "btnAccept";
-            this.btnAccept.Size = new System.Drawing.Size(188, 40);
-            this.btnAccept.TabIndex = 23;
+            this.btnAccept.Size = new System.Drawing.Size(94, 21);
+            this.btnAccept.TabIndex = 5;
             this.btnAccept.Text = "Übernehmen";
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // btnNewToy
             // 
-            this.btnNewToy.Location = new System.Drawing.Point(1148, 581);
-            this.btnNewToy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNewToy.Location = new System.Drawing.Point(574, 302);
+            this.btnNewToy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNewToy.Name = "btnNewToy";
-            this.btnNewToy.Size = new System.Drawing.Size(188, 40);
-            this.btnNewToy.TabIndex = 24;
+            this.btnNewToy.Size = new System.Drawing.Size(94, 21);
+            this.btnNewToy.TabIndex = 6;
             this.btnNewToy.Text = "Erfassen...";
             this.btnNewToy.UseVisualStyleBackColor = true;
             this.btnNewToy.Click += new System.EventHandler(this.btnNewToy_Click);
@@ -94,11 +94,11 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(48, 40);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(24, 21);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(708, 246);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(354, 128);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Spielzeugdetails";
@@ -106,28 +106,28 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(624, 198);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(312, 103);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 25);
+            this.label6.Size = new System.Drawing.Size(28, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "CHF";
             // 
             // txtPricePerWeek
             // 
-            this.txtPricePerWeek.Location = new System.Drawing.Point(240, 194);
-            this.txtPricePerWeek.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPricePerWeek.Location = new System.Drawing.Point(120, 101);
+            this.txtPricePerWeek.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPricePerWeek.Name = "txtPricePerWeek";
-            this.txtPricePerWeek.Size = new System.Drawing.Size(376, 31);
-            this.txtPricePerWeek.TabIndex = 8;
+            this.txtPricePerWeek.Size = new System.Drawing.Size(190, 20);
+            this.txtPricePerWeek.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 202);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(4, 105);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 25);
+            this.label5.Size = new System.Drawing.Size(89, 13);
             this.label5.TabIndex = 7;
             this.label5.Text = "Preis pro Woche:";
             // 
@@ -138,74 +138,74 @@
             "Kindergarten",
             "Unterstufe",
             "Oberstufe"});
-            this.combCategory.Location = new System.Drawing.Point(240, 148);
-            this.combCategory.Margin = new System.Windows.Forms.Padding(4);
+            this.combCategory.Location = new System.Drawing.Point(120, 77);
+            this.combCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combCategory.Name = "combCategory";
-            this.combCategory.Size = new System.Drawing.Size(440, 33);
-            this.combCategory.TabIndex = 6;
+            this.combCategory.Size = new System.Drawing.Size(222, 21);
+            this.combCategory.TabIndex = 3;
             // 
             // txtToyName
             // 
-            this.txtToyName.Location = new System.Drawing.Point(240, 108);
-            this.txtToyName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtToyName.Location = new System.Drawing.Point(120, 56);
+            this.txtToyName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtToyName.Name = "txtToyName";
-            this.txtToyName.Size = new System.Drawing.Size(440, 31);
-            this.txtToyName.TabIndex = 5;
+            this.txtToyName.Size = new System.Drawing.Size(222, 20);
+            this.txtToyName.TabIndex = 2;
             // 
             // txtBrand
             // 
-            this.txtBrand.Location = new System.Drawing.Point(240, 69);
-            this.txtBrand.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBrand.Location = new System.Drawing.Point(120, 36);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(440, 31);
-            this.txtBrand.TabIndex = 5;
+            this.txtBrand.Size = new System.Drawing.Size(222, 20);
+            this.txtBrand.TabIndex = 1;
             // 
             // txtToyNo
             // 
-            this.txtToyNo.Location = new System.Drawing.Point(240, 31);
-            this.txtToyNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtToyNo.Location = new System.Drawing.Point(120, 16);
+            this.txtToyNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtToyNo.Name = "txtToyNo";
             this.txtToyNo.ReadOnly = true;
-            this.txtToyNo.Size = new System.Drawing.Size(440, 31);
+            this.txtToyNo.Size = new System.Drawing.Size(222, 20);
             this.txtToyNo.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 152);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(4, 79);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 25);
+            this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Kategorie:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 77);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(4, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 25);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Marke:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 115);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(4, 60);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 25);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(4, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 25);
+            this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Spielzeugnummer:";
             // 
@@ -214,35 +214,35 @@
             this.listAllToys.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.NachName});
-            this.listAllToys.Location = new System.Drawing.Point(788, 40);
-            this.listAllToys.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.listAllToys.Location = new System.Drawing.Point(394, 21);
+            this.listAllToys.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.listAllToys.Name = "listAllToys";
-            this.listAllToys.Size = new System.Drawing.Size(548, 498);
+            this.listAllToys.Size = new System.Drawing.Size(276, 261);
             this.listAllToys.TabIndex = 14;
             this.listAllToys.UseCompatibleStateImageBehavior = false;
             this.listAllToys.View = System.Windows.Forms.View.Details;
             this.listAllToys.SelectedIndexChanged += new System.EventHandler(this.listAllToys_SelectedIndexChanged);
+            // 
+            // Id
+            // 
+            this.Id.Text = "Id";
             // 
             // NachName
             // 
             this.NachName.Text = "Name";
             this.NachName.Width = 398;
             // 
-            // Id
-            // 
-            this.Id.Text = "Id";
-            // 
             // ToysListView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 648);
+            this.ClientSize = new System.Drawing.Size(678, 337);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.btnNewToy);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listAllToys);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ToysListView";
             this.Text = "Spielzeuge";
             this.Load += new System.EventHandler(this.ToysListView_Load);
