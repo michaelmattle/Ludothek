@@ -29,14 +29,11 @@ namespace Ludothek.Application.Controller
             model.AddCustomer(customer);
         }
 
-        public void ChangeSelectedCustomer(Customer newCustomer)
-        {/*
-            Customer current = listView.SelectedItems[0] as Customer;
-            if (toy != null)
-                model.ChangeCustomer(customer, newCustomer);*/
+        public void ChangeCustomer(Customer customer, Customer newCustomer)
+        {
+            model.ChangeCustomer(customer, newCustomer);
         }
-
-
+        
         public void Update()
         {
             if(listView != null)
@@ -44,9 +41,9 @@ namespace Ludothek.Application.Controller
                 listView.Items.Clear();
                 foreach (Customer customer in model)
                 {
-                    ListViewItem item = new ListViewItem(customer.Name);
-                    item.SubItems.Add(customer.Surename);
+                    ListViewItem item = new ListViewItem(customer.CustomerNo+"");
                     item.SubItems.Add(customer.Name);
+                    item.SubItems.Add(customer.Surename);
                     listView.Items.Add(item);
                 }
             }

@@ -23,7 +23,20 @@ namespace Ludothek.Application.View
         // update selected customer data
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                int selectedIndex = listAllCustomers.SelectedIndices[0];
+
+                Customer selectedCustomer = _model.GetCustomerById(selectedIndex + 1);
+
+                Customer newCustomer = new Customer(txtName.Text, txtSurename.Text, txtPhoneNo.Text, dateBirthday.SelectionRange.Start.ToString(),
+                txtStreet.Text, txtZIP.Text, txtPlace.Text, txtCountry.Text, txtMail.Text, cbClubMember.Checked,
+                selectedCustomer.CustomerNo);
+
+                _controller.ChangeCustomer(selectedCustomer, newCustomer);
+            }
+            catch(Exception ex) { }
+           
         }
 
         private void btnNewCustomer_Click(object sender, EventArgs e)
