@@ -46,7 +46,6 @@ namespace Ludothek.Application.View
             string EMail = txtMail.Text;
             bool ClubMember = cbClubMember.Checked;
 
-            MV.addCustomer(Name, Surename, Phone, Birthday, Street, ZIP, Place, Country, EMail, ClubMember);
         }
     }
 }
