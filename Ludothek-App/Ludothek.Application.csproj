@@ -48,12 +48,14 @@
   <ItemGroup>
     <Compile Include="Controller\BaseController.cs" />
     <Compile Include="Controller\CustomerController.cs" />
+    <Compile Include="Controller\ToyController.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Model\Repository.cs" />
+    <Compile Include="Model\ToyModel.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Model\Toy.cs" />
+    <Compile Include="Toy.cs" />
     <Compile Include="View\CustomerListView.cs">
       <SubType>Form</SubType>
     </Compile>

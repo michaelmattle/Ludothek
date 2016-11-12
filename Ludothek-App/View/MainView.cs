@@ -37,7 +37,7 @@ namespace Ludothek.Application.View
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
-            CustomerListView clv = new CustomerListView(this);
+            CustomerListView clv = new CustomerListView(new CustomerModel());
             clv.ShowDialog();
         }
 
@@ -66,7 +66,7 @@ namespace Ludothek.Application.View
 
         private void übersichtToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CustomerListView clv = new CustomerListView(this);
+            CustomerListView clv = new CustomerListView(new CustomerModel());
             clv.ShowDialog();
         }
 

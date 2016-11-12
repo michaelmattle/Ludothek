@@ -25,35 +25,26 @@ namespace Ludothek.Application.View
 
         private void btnNewCustomer_Click(object sender, EventArgs e)
         {
-            NewCustomerView ncv = new NewCustomerView(MV);
+            NewCustomerView ncv = new NewCustomerView(this);
             ncv.ShowDialog();
         }
        
-
-        public PersonenListView(PersonenModel model)
-        {
-            InitializeComponent();
-            personenModel = model;
-            personelListViewController = new PersonenListViewController(personenModel, this, listAllCustomers);
-        }
-
-
         #region Observer
-        private void PersonenListView_Load(object sender, EventArgs e)
+        private void CustomerListView_Load(object sender, EventArgs e)
         {
             //register observer
-            personenModel.AddView(this);
+            _model.AddView(this);
         }
 
-        private void PersonenListView_FormClosing(object sender, FormClosingEventArgs e)
+        private void CustomerListView_FormClosing(object sender, FormClosingEventArgs e)
         {
             //deregister observer
-            personenModel.RemoveView(this);
+            _model.RemoveView(this);
         }
 
         public void UpdateView()
         {
-            personelListViewController.update();
+            _controller.Update();
         }
         #endregion
     }

@@ -23,6 +23,10 @@ namespace Ludothek.Application.View
             controller = new Controller.ToyController(model, this, listAllToys);
         }
 
+        public ToysListView()
+        {
+        }
+
         private void btnAccept_Click(object sender, EventArgs e)
         {
 

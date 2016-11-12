@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ludothek.Application.Model
 {
-    class CustomerModel : BaseModel, IEnumerable<Customer>
+    public class CustomerModel : BaseModel, IEnumerable<Customer>
     {
         List<Customer> customers;
         #region Observer
